@@ -11,6 +11,7 @@
     color: $black;
     @include phone{
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        width: 90%;
     }
 
     .hero{

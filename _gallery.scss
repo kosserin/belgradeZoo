@@ -11,8 +11,8 @@
         grid-template-rows: 125px 150px 100px 75px;
     }
 
-    grid-template-areas: "a a b b"
-                         "c d d d"
+    grid-template-areas: "a b c c"
+                         "d d d d"
                          "e f g h"
                          "i j k l";
     grid-gap: 2px;

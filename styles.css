@@ -1352,6 +1352,7 @@ header .social-medias a:hover {
   #heroes-of-zoo {
     -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 90%;
   }
 }
 
@@ -1530,7 +1531,7 @@ header .social-medias a:hover {
 }
 
 .section-container img {
-  width: 0%;
+  width: 50%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1785,7 +1786,7 @@ header .social-medias a:hover {
   display: grid;
   -ms-grid-rows: 350px 300px 200px 200px;
       grid-template-rows: 350px 300px 200px 200px;
-      grid-template-areas: "a a b b" "c d d d" "e f g h" "i j k l";
+      grid-template-areas: "a b c c" "d d d d" "e f g h" "i j k l";
   grid-gap: 2px;
 }
 
@@ -1810,27 +1811,26 @@ header .social-medias a:hover {
 #gallery-grid .a {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: a;
 }
 
 #gallery-grid .b {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 2;
   grid-area: b;
 }
 
 #gallery-grid .c {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
   grid-area: c;
 }
 
 #gallery-grid .d {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-area: d;
 }
 
@@ -2368,7 +2368,7 @@ header .social-medias a:hover {
 
 @media screen and (max-width: 1280px) {
   #muja-container .first-container .text-container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -2379,7 +2379,7 @@ header .social-medias a:hover {
 
 @media screen and (max-width: 1280px) {
   #muja-container .first-container .image-container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
   }
@@ -2396,7 +2396,12 @@ header .social-medias a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 200px 0 100px 0;
+  margin: 200px auto 100px auto;
+  width: 90%;
+}
+
+#muja-container .second-container .image-container img {
+  width: 100%;
 }
 
 * {
