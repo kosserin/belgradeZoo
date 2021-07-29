@@ -1,0 +1,29 @@
+@import 'colors';
+@import 'media-queries';
+
+#rules{
+    & h1{
+        text-align: center;
+    }
+    text-align: center;
+    background: rgba($color: $green, $alpha: .8);
+    padding: 6rem 0 3rem 0;
+    & .outside-rules{
+        text-align: center;
+    }
+    & .rules-p{
+        width: 65%;
+        margin: 0 auto;
+        text-align: left;
+        padding-bottom: 2rem;
+        @include phone{
+            width: 80%;
+        }
+    }
+    & img{
+        text-align: center;
+        @include mini{
+            width: 90vw;
+        }
+    }
+}

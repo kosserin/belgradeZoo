@@ -1,0 +1,117 @@
+@import 'media-queries';
+@import 'colors';
+
+
+#contact{
+    width: 80vw;
+    padding: 100px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include mini{
+        flex-direction: column;
+    }
+
+    & .together{
+        display: flex;
+        align-items: center;
+
+        @include mini{
+            justify-content: center;
+        }
+
+        i{
+            margin-right: 10px;
+            font-size: 2rem;
+            color: $green;
+        }
+    }
+
+    & .contact-left-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mini{
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        & div{
+            margin: 10px 0;
+        }
+
+        & p{
+            font-size: 1.3rem;
+        }
+
+        & a{
+            text-decoration: none;
+            color: $green;
+            transition: all 300ms ease;
+
+            &:hover{
+                color: $orange;
+                transition: all 300ms ease;
+            }
+        }
+    }
+
+    & .contact-right-side form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 4rem;
+        border-radius: 40px;
+        box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.25);
+        -webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.25);
+        min-width: 500px;
+
+        @include mini{
+            padding: 2rem;
+            min-width: 300px;
+        }
+
+        & input[type=text], & input[type=email]{
+            border: none;
+            outline: none;
+            border-bottom: 2px solid $green;
+            border-left: 2px solid $green;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding-left: 1rem;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+
+        & textarea{
+            border: none;
+            outline: none;
+            padding: 1rem;
+            border-bottom: 2px solid $green;
+            border-left: 2px solid $green;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        & input[type=submit]{
+            position: relative;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: $green;
+            color: $black;
+            height: 50px;
+            width: 100%;
+            transition: all 300ms ease;
+
+            &:hover{
+                background: $orange;
+                transition: all 300ms ease;
+            }
+        }
+    }
+}

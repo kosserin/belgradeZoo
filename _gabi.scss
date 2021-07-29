@@ -1,0 +1,50 @@
+@import 'media-queries';
+@import 'colors';
+
+#gabi-container{
+    width: 80vw;
+    margin: 0 auto;
+    .first-container{
+        margin: 100px 0 150px 0;
+        display: flex;
+
+        @include mini{
+            flex-direction: column;
+        }
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        .image-container{
+            @include mini{
+                margin-top: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .image-container img{
+            width: 400px;
+        }
+    }
+
+    .second-container{
+        width: 60vw;
+        margin: 0 auto;
+
+        @include phone{
+            width: 80vw;
+        }
+
+        .image-container{
+            margin: 100px 0;
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

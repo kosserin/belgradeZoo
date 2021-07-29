@@ -1,0 +1,57 @@
+@import 'media-queries';
+@import 'colors';
+
+#sami-container{
+    width: 60vw;
+    margin: 100px auto;
+
+    @include laptop{
+        width: 80vw;
+    }
+
+    & .first-container{
+        display: flex;
+
+        @include mini{
+            flex-direction: column;
+        }
+
+        & .image-container{
+            @include mini{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 100px;
+            }
+        }
+    }
+
+    & .second-container{
+        margin-top: 100px;
+        & .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+    }
+
+    & .third-container{
+        display: flex;
+        margin: 100px 0;
+        flex-direction: column;
+
+        & .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 0;
+        }
+    }
+
+    & .fourth-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,48 @@
+@import 'media-queries';
+@import 'colors';
+
+#muja-container{
+    width: 80vw;
+    margin: 0 auto;
+
+    .first-container{
+        display: flex;
+        margin: 100px 0;
+
+        @include laptop{
+            flex-direction: column;
+        }
+
+        .text-container{
+            width: 50%;
+
+            @include laptop{
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        .image-container{
+            width: 50%;
+
+            @include laptop{
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .second-container{
+
+        .image-container{
+            display: flex;
+            justify-content: center;
+            margin: 200px 0 100px 0;
+        }
+    }
+}

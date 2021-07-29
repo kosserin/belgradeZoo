@@ -1,0 +1,67 @@
+@import 'media-queries';
+@import 'colors';
+
+#animals{
+    &>h1{
+        text-align: center;
+        padding: 100px 0 0 0;
+        font-size: 2.3rem;
+
+        @include phone{
+            font-size: 2rem;
+        }
+    }
+
+    &>p{
+        text-align: center;
+        width: 60%;
+        margin: 30px auto;
+
+        @include tablet{
+            width: 80%;
+        }
+    }
+
+    .animals-grid{
+        display: grid;
+        width: 80vw;
+        margin: 0 auto 100px auto;
+        grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+        grid-gap: 20px;
+        text-align: center;
+
+        & .animal{
+            border-radius: 40px;
+            box-shadow: -1px 1px 11px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: -1px 1px 11px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: -1px 1px 11px 0px rgba(0,0,0,0.25);
+    overflow: hidden;
+
+    & h1{
+        padding: 1rem 2rem;
+        font-weight: 600;
+    }
+
+    & p{
+        padding: 0rem 2rem 3rem 2rem;
+    }
+        }
+
+        & .img-div{
+            overflow: hidden;
+            height: 300px;
+
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 500ms ease;
+
+                &:hover{
+                    transform: scale(1.2);
+                    transition: transform 500ms ease;
+                }
+            }
+        }
+    }
+}

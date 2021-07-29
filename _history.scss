@@ -1,0 +1,98 @@
+@import 'colors';
+@import 'media-queries';
+
+.main-section{
+    background-color: rgb(219, 219, 219);
+    padding: 3rem 0;
+    & .first-div{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+        width: 90%;
+        margin: 0 auto;
+        @include phone{
+            grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
+        }
+        & img{
+            width: 100%;
+        }
+
+        & p{
+            width: 90%;
+        }
+    }
+    & .second-div{
+        padding: 3rem 0;
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+        @include phone{
+            grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
+        }
+
+        & p{
+            width: 90%;
+        }
+
+        & img{
+            width: 100%;
+        }
+    }
+    & .third-div{
+        padding: 3rem 0;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img{
+            width: 700px;
+            @include tablet{
+                width: 500px;
+            }
+            @include phone{
+                width: 300px;
+            }
+        }
+        & .third-div-first-p{
+            width: 60%;
+            padding: 2rem 0;
+            margin: 0 auto;
+            @include tablet{
+                width: 80%;
+            }
+            @include phone{
+                width: 85%;
+                text-align: center;
+            }
+        }
+    }
+    & .fourth-div{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img{
+            width: 250px;
+            @include tablet{
+                width: 180px;
+            }
+            @include phone{
+                width: 140px;
+            }
+        }
+    }
+    & .director{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    & .img-here{
+        text-align: center;
+    }
+}
+.istorijsko-telo{
+    background-color: rgb(219, 219, 219);
+}

@@ -1,0 +1,141 @@
+@import 'media-queries';
+@import 'colors';
+
+.footer-container{
+    height: 300px;
+    background-color: $green;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        flex: 1;
+        align-items: center;
+
+        & span{
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        & li{
+            margin: 3px 0;
+        }
+
+        & a{
+            text-decoration: none;
+            color: $black;
+            font-weight: 400;
+            transition: all 300ms ease;
+            font-size: .9rem;
+
+            &:hover{
+                color: $gray;
+                transition: all 300ms ease;
+            }
+        }
+    }
+
+    & .about-nav{
+
+        @include phone{
+            display: none;
+        }
+    }
+
+    & iframe{
+        flex: 2;
+
+        @include mini-laptop{
+            display: none;
+        }
+    }
+
+    & .kontakt{
+        flex: 1;
+        
+        & .social-medias{
+            display: flex;
+            justify-content: flex-start;
+            width: 80%;
+            margin: 0 auto;
+
+            & a{
+                margin: 0 5px;
+                font-size: 1.3rem;
+                color: $black;
+                transition: all 300ms ease;
+
+                &:hover{
+                    color: $gray;
+                    transition: all 300ms ease;
+                }
+            }
+        }
+
+        & .kontakt-tekst{
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+
+            & .logo{
+                display: flex;
+                align-items: center;
+                & a{
+                    text-decoration: none;
+                    font-family: 'Akaya Telivigala', cursive;
+                    font-size: 2.5rem;
+                    transition: all 300ms ease;
+
+                    @include phone{
+                        font-size: 1.5rem;
+                    }
+            
+                    & img{
+                        width: 35px;
+
+                        @include phone{
+                            width: 20px;
+                        }
+                    }
+
+                    &:hover{
+                        color: $gray;
+                        transition: all 300ms ease;
+                    }
+                }
+            }
+
+            & a{
+                color: $black;
+                display: block;
+                margin: 5px 0;
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+.copyright{
+    background-color: rgba($green,.8);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $black;
+
+    @include phone{
+        font-size: .9rem;
+    }
+    & a{
+        text-decoration: none;
+        color: $white;
+        &:hover{
+            color: $black;
+        }
+    }
+}
